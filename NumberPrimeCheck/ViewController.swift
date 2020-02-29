@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     self.view.accessibilityIdentifier = "JustView"
     self.view.backgroundColor = .green
-    self.view.tag = 1000
+    self.view.tag = 2000
   }
   
   override func viewWillAppear(_ animated: Bool) {
