@@ -14,12 +14,18 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-   
+    self.view.accessibilityIdentifier = "JustView"
+    self.view.backgroundColor = .green
+    self.view.tag = 1000
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     self.register()
+  }
+  //MARK:- Methods
+  func dismissMe() {
+    self.view.endEditing(true)
   }
 }
 
