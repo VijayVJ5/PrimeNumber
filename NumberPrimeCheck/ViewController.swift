@@ -14,8 +14,10 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-   
-    self.view.backgroundColor = .red
+
+    self.view.accessibilityIdentifier = "JustView"
+    self.view.backgroundColor = .green
+    self.view.tag = 1000
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -26,7 +28,6 @@ class ViewController: UIViewController {
   func dismissKeyboard() {
     self.view.endEditing(true)
   }
-  
 }
 
 extension ViewController : KeyboardTempProtocol {
