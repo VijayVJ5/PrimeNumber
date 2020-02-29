@@ -15,12 +15,18 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
    
+    self.view.backgroundColor = .red
   }
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     self.register()
   }
+  
+  func dismissKeyboard() {
+    self.view.endEditing(true)
+  }
+  
 }
 
 extension ViewController : KeyboardTempProtocol {
